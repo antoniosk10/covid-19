@@ -9,7 +9,95 @@
 </head>
 
 <body>
-        
+    <header class="header">
+        <h1 class="header__title">COVID-19 DASHBOARD</h1>
+    </header>
+    <main class="main">
+        <div class="row row-sm">
+            <section class="section global-cases">
+                <h2 class="global-cases__title">Global Cases</h2>
+                <p class="global-cases__quantity">13000000</p>
+            </section>
+            <section class="section countries-cases"> 
+                <h2 class="countries-cases__title">Cases by Countries</h2>
+                <ul class="countries-cases__list">
+                    <li class="countries-cases__list-item">
+                        <span class="countries-cases__quantity">12333333</span>
+                        <span class="countries-cases__country-name">US</span>
+                    </li>
+                    <li class="countries-cases__list-item">
+                        <span class="countries-cases__quantity">12333333</span>
+                        <span class="countries-cases__country-name">Russia</span>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="row row-lg">
+            <section class="section map">
+                <h2 class="map__title">Map</h2>
+                map
+            </section>
+        </div>
+        <div class="row row-lg">
+            <section class="section table">
+                <h2 class="table__title">Table Cases</h2>
+                <div class="tabs tabs-period">
+                    <label class="tabs__item active">
+                        <span class="tabs__item-text">All period</span>
+                        <input type="radio" name="period" value='all'>
+                    </label>                   
+                    <label class="tabs__item">
+                        <span class="tabs__item-text">Last day</span>
+                        <input type="radio" name="period" value='last'>
+                    </label>
+                </div>
+                <ul class="table__list">
+                    <li class="table__list-item">
+                        <div class="table__item table__item--name">
+                            US
+                        </div>
+                        <div class="table__item table__item--cases">
+                           1000000
+                        </div>
+                        <div class="table__item table__item--death">
+                            2000
+                        </div>
+                        <div class="table__item table__item--recovered">
+                           80000
+                        </div>
+                    </li>
+                    <li class="table__list-item">
+                        <div class="table__item table__item--name">
+                            Russia
+                        </div>
+                        <div class="table__item table__item--cases">
+                            1000000
+                        </div>
+                        <div class="table__item table__item--death">
+                            2000
+                        </div>
+                        <div class="table__item table__item--recovered">
+                            80000
+                        </div>
+                    </li>
+                </ul>
+                <div class="tabs tabs-quantity">
+                    <label class="tabs__item active">
+                        <span class="tabs__item-text">Absolute quantity</span>
+                        <input type="radio" name="quantity" value='absolute'>
+                    </label>                   
+                    <label class="tabs__item">
+                        <span class="tabs__item-text">Quantity on 100 thousand</span>
+                        <input type="radio" name="quantity" value='on-100'>
+                    </label>
+                </div>
+            </section>
+            <section class="section graph">
+                <h2 class="graph__title">Graph</h2>
+                graph
+            </section>
+        </div>
+    </main>
     <script src="./dist/bundle.js"></script>
 </body>
 </html>
