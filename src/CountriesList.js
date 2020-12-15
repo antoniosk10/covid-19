@@ -2,10 +2,19 @@ class CountriesList {
   constructor() {
     this.arrayCountries = Array.prototype.slice.call(document.querySelectorAll('.countries-cases__list-item'));
     this.search = document.querySelector('[data-search-country]');
+    this.innerContainer = document.querySelector('.countries-cases .section__inner');
+    this.btnExpand = this.innerContainer.querySelector('[data-btn-expand]');
   }
 
   init() {
     this.setEventSearchCountry();
+    this.setEventBtnExpand();
+  }
+
+  setEventBtnExpand() {
+    this.btnExpand.addEventListener('click', () => {
+      this.innerContainer.classList.toggle('expanded');
+    });
   }
 
   setEventSearchCountry() {
