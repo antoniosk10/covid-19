@@ -1,4 +1,4 @@
-/* mport Utils from './Utils';
+import Utils from './Utils';
 
 const utils = new Utils();
 
@@ -28,4 +28,3 @@ class Table {
 }
 
 export default Table;
- */
