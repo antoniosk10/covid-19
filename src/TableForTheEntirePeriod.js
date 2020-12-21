@@ -1,4 +1,4 @@
-i/* mport Utils from './Utils';
+/* mport Utils from './Utils';
 
 const utils = new Utils();
 
