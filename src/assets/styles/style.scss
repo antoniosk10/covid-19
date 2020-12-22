@@ -217,9 +217,12 @@ body {
 }
 
 .table {
+    max-height: 60%;
     &__list {
         padding: 10px 0;
         height: calc(100% - 81px);
+        max-height: calc(100% - 81px);
+        overflow: auto;
         &-item {
             display: flex;
         }
@@ -253,5 +256,8 @@ body {
     }
     .countries-cases__list {
         max-height: 300px;
+    }
+    .table__list {
+      max-height: 300px;
     }
 }
