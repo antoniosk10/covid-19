@@ -1,4 +1,5 @@
 import Utils from './Utils';
+import map from './Map';
 
 const utils = new Utils();
 
@@ -12,11 +13,12 @@ class CountriesList {
   }
 
   init() {
-    utils.infoForAllPeriod().then((data) => {
+    utils.getCoordinatesCountries().then((data) => {
       this.setCountryList(data);
     }).catch(() => { this.createMessageError(); });
     this.setEventSearchCountry();
     this.setEventBtnExpand();
+    this.setEventItems();
   }
 
   setEventBtnExpand() {
@@ -56,10 +58,10 @@ class CountriesList {
 
   static createCountryList(data) {
     let layout = '';
-    data.Countries.forEach((el) => {
-      layout += `<li class="countries-cases__list-item">
-      <span class="countries-cases__quantity">${el.TotalConfirmed}</span>
-      <span class="countries-cases__country-name">${el.Country}</span>
+    data.forEach((el) => {
+      layout += `<li class="countries-cases__list-item" data-lat='${el.countryInfo.lat}' data-long='${el.countryInfo.long}'>
+      <span class="countries-cases__quantity">${el.cases}</span>
+      <span class="countries-cases__country-name">${el.country}</span>
       </li>`;
     });
     return layout;
@@ -67,6 +69,16 @@ class CountriesList {
 
   createMessageError() {
     this.countryList.innerHTML = 'Try Later :(';
+  }
+
+  setEventItems() {
+    this.countryList.addEventListener('click', (e) => {
+      const item = e.target.closest('.countries-cases__list-item');
+      if (item) {
+        map.map.panTo([+item.dataset.lat, +item.dataset.long]);
+        map.map.setZoom(10);
+      }
+    });
   }
 }
 
