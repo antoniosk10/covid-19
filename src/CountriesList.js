@@ -14,7 +14,7 @@ class CountriesList {
   init() {
     utils.infoForAllPeriod().then((data) => {
       this.setCountryList(data);
-    }).catch(() => { CountriesList.createMessageError(); });
+    }).catch(() => { this.createMessageError(); });
     this.setEventSearchCountry();
     this.setEventBtnExpand();
   }
@@ -65,7 +65,7 @@ class CountriesList {
     return layout;
   }
 
-  static createMessageError() {
+  createMessageError() {
     this.countryList.innerHTML = 'Try Later :(';
   }
 }
