@@ -136,6 +136,10 @@ body {
         color: $red;
     }
     &__list-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 10px;
         cursor: pointer;
         &:hover {
             background-color: rgba(255,255,255,0.5);
@@ -144,6 +148,10 @@ body {
     &__list {
         max-height: calc(100% - 55px);
         overflow: auto;
+    }
+    &__country-name {
+      font-size: 15px;
+      text-align: right;
     }
 }
 
