@@ -58,7 +58,6 @@ class CountriesList {
 
   static createCountryList(data) {
     let layout = '';
-    console.log(data);
     data.forEach((el) => {
       layout += `<li class="countries-cases__list-item" data-lat='${el.countryInfo.lat}' data-long='${el.countryInfo.long}'>
       <span class="countries-cases__quantity">${el.cases}</span>
