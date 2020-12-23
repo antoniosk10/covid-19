@@ -12,6 +12,7 @@ class Graph {
     this.setEventBtnExpand();
     Utils.getLastFiveCases(this.period[this.period.length - 1], this.period[0]).then((data) => {
       this.period.pop();
+      this.period.reverse();
       this.setGraph(data.map((el) => el.NewConfirmed));
     });
   }
