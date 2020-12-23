@@ -1,7 +1,5 @@
 import Utils from './Utils';
 
-const utils = new Utils();
-
 class GlobalCases {
   constructor() {
     this.innerContainer = document.querySelector('.global-cases .section__inner');
@@ -10,7 +8,7 @@ class GlobalCases {
   }
 
   init() {
-    utils.infoForAllPeriod().then((data) => {
+    Utils.globalInfo().then((data) => {
       this.setGlobalCases(data);
     }).catch(() => { this.createMessageError(); });
     this.setEventBtnExpand();

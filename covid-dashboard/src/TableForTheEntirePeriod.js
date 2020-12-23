@@ -6,6 +6,14 @@ class Table {
   constructor() {
     this.populationEarth = 7827000000;
     this.oneHundredThousand = 100000;
+    this.innerContainer = document.querySelector('.table .section__inner');
+    this.btnExpand = this.innerContainer.querySelector('[data-btn-expand]');
+  }
+
+  setEventBtnExpand() {
+    this.btnExpand.addEventListener('click', () => {
+      this.innerContainer.classList.toggle('expanded');
+    });
   }
 
   viewData() {

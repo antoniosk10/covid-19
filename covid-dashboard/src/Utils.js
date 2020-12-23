@@ -6,6 +6,12 @@ class Utils {
       .then((data) => data);
   }
 
+  static globalInfo() {
+    return fetch('https://api.covid19api.com/summary')
+      .then((response) => response.json())
+      .then((data) => data);
+  }
+
   static getCoordinatesCountries() {
     return fetch('https://corona.lmao.ninja/v2/countries')
       .then((response) => response.json())

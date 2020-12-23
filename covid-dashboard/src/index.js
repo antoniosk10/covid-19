@@ -23,6 +23,7 @@ countiesList.init();
 globalCases.init();
 graph.init();
 table.viewData();
+table.setEventBtnExpand();
 
 tableListAll.addEventListener('click', () => {
   tableList.innerHTML = '';
