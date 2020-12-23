@@ -1,8 +1,6 @@
 import Utils from './Utils';
 import map from './Map';
 
-const utils = new Utils();
-
 class CountriesList {
   constructor() {
     this.arrayCountries = Array.prototype.slice.call(document.querySelectorAll('.countries-cases__list-item'));
@@ -13,7 +11,7 @@ class CountriesList {
   }
 
   init() {
-    utils.getCoordinatesCountries().then((data) => {
+    Utils.getCoordinatesCountries().then((data) => {
       this.setCountryList(data);
     }).catch(() => { this.createMessageError(); });
     this.setEventSearchCountry();

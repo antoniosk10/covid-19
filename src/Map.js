@@ -1,8 +1,6 @@
 import L from './assets/plugins/Leaflet/leaflet';
 import Utils from './Utils';
 
-const utils = new Utils();
-
 class Map {
   constructor() {
     this.innerContainer = document.querySelector('.map .section__inner');
@@ -13,7 +11,7 @@ class Map {
   init() {
     this.setEventBtnExpand();
     this.createMap();
-    utils.getCoordinatesCountries().then((data) => {
+    Utils.getCoordinatesCountries().then((data) => {
       this.setMarkersMap(data);
     }).catch(() => { this.createMessageError(); });
   }
