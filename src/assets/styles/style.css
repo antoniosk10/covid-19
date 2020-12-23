@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 500;
+  outline: 0;
 }
 
 li {
@@ -29,6 +30,7 @@ body {
 }
 
 .main {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   height: calc(100vh - 88px);
@@ -62,6 +64,63 @@ body {
 
 .section.graph {
   padding: 0;
+}
+
+.section__inner {
+  max-height: 400px;
+  position: relative;
+  height: 100%;
+  transition: all 0.3s;
+}
+
+.section__inner:hover .expand-btn {
+  display: flex;
+}
+
+.section__inner.expanded {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: #150f30;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  z-index: 1;
+}
+
+.section__inner.expanded .expand-icon {
+  display: none;
+}
+
+.section__inner.expanded .roll-up-icon {
+  display: flex;
+}
+
+.expand-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: none;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.expand-icon {
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+}
+
+.roll-up-icon {
+  display: none;
+  width: 100%;
+  height: 100%;
+  fill: #fff;
 }
 
 .global-cases {
@@ -152,6 +211,7 @@ body {
 }
 
 .table__list {
+  overflow: auto;
   padding: 10px 0;
   height: calc(100% - 81px);
 }
@@ -170,6 +230,15 @@ body {
 
 .table__item--recovered {
   color: #04be3c;
+}
+
+.search-country {
+  width: 100%;
+  height: 30px;
+  margin: 10px 0;
+  padding: 0 10px;
+  border: none;
+  border-radius: 10px;
 }
 
 @media (max-width: 1200px) {
