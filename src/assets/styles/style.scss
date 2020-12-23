@@ -66,6 +66,7 @@ body {
         padding: 0;
     }
     &__inner {
+      max-height:400px;  
       position: relative;
       height: 100%;
       transition: all 0.3s;
@@ -210,6 +211,7 @@ body {
 
 .table {
     &__list {
+        overflow: auto;
         padding: 10px 0;
         height: calc(100% - 81px);
         &-item {
