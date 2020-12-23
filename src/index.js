@@ -4,7 +4,6 @@ import Table from './TableForTheEntirePeriod';
 import CountriesList from './CountriesList';
 import GlobalCases from './GlobalCases';
 import Graph from './Graph';
-import Map from './Map';
 
 const tableListAll = document.querySelector('.tabs__item-all');
 const tableList = document.querySelector('.table__list');
@@ -17,13 +16,12 @@ const for100Thousand = document.querySelector('.tabs__item-active-100');
 const countiesList = new CountriesList();
 const globalCases = new GlobalCases();
 const graph = new Graph();
-const map = new Map();
+
 const table = new Table();
 
 countiesList.init();
 globalCases.init();
 graph.init();
-map.init();
 table.viewData();
 
 tableListAll.addEventListener('click', () => {
