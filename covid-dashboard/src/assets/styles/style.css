@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  outline: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+h2 {
+  text-align: center;
+}
+
+body {
+  padding: 20px;
+  background-color: #150f30;
+  color: #fff;
+}
+
+.header__title {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  text-align: center;
+  font-weight: 900;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(100vh - 88px);
+  border-left: 1px solid #fff;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.row-sm {
+  width: 20%;
+}
+
+.row-lg {
+  width: 40%;
+}
+
+.section {
+  flex-grow: 1;
+  padding: 10px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.section.map {
+  padding: 0;
+}
+
+.section.graph {
+  padding: 0;
+}
+
+.section__inner {
+  max-height: 400px;
+  position: relative;
+  height: 100%;
+  transition: all 0.3s;
+}
+
+.section__inner:hover .expand-btn {
+  display: flex;
+}
+
+.section__inner.expanded {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: #150f30;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  z-index: 1;
+}
+
+.section__inner.expanded .expand-icon {
+  display: none;
+}
+
+.section__inner.expanded .roll-up-icon {
+  display: flex;
+}
+
+.expand-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: none;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.expand-icon {
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+}
+
+.roll-up-icon {
+  display: none;
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+}
+
+.global-cases {
+  max-height: 100px;
+}
+
+.global-cases__quantity {
+  text-align: center;
+  font-size: 28px;
+  color: #a51e1e;
+}
+
+.countries-cases {
+  overflow: hidden;
+}
+
+.countries-cases__quantity {
+  color: #a51e1e;
+}
+
+.countries-cases__list-item {
+  cursor: pointer;
+}
+
+.countries-cases__list-item:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.countries-cases__list {
+  max-height: calc(100% - 55px);
+  overflow: auto;
+}
+
+.map__title {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.graph__title {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.tabs {
+  display: flex;
+}
+
+.tabs__item {
+  width: 50%;
+  text-align: center;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.tabs__item.active {
+  background-color: #fff;
+  color: #150f30;
+}
+
+.tabs__item.active:hover {
+  background-color: #fff;
+}
+
+.tabs__item:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.tabs-period .tabs__item:first-child {
+  border-radius: 10px 0 0 0;
+}
+
+.tabs-period .tabs__item:last-child {
+  border-radius: 0 10px 0 0;
+}
+
+.tabs-quantity .tabs__item:first-child {
+  border-radius: 0 0 0 10px;
+}
+
+.tabs-quantity .tabs__item:last-child {
+  border-radius: 0 0 10px 0;
+}
+
+.tabs input {
+  display: none;
+}
+
+.table__list {
+  overflow: auto;
+  padding: 10px 0;
+  height: calc(100% - 81px);
+}
+
+.table__list-item {
+  display: flex;
+}
+
+.table__item {
+  width: 25%;
+}
+
+.table__item--cases {
+  color: #a51e1e;
+}
+
+.table__item--recovered {
+  color: #04be3c;
+}
+
+.search-country {
+  width: 100%;
+  height: 30px;
+  margin: 10px 0;
+  padding: 0 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+  .row {
+    width: 100%;
+  }
+  .main {
+    height: auto;
+  }
+  .countries-cases__list {
+    max-height: 300px;
+  }
+}
