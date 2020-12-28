@@ -93,7 +93,7 @@ var CountriesList = /*#__PURE__*/function () {
       this.showAllCountry();
       this.arrayCountries.forEach(function (el) {
         var countryItem = el;
-        var countryName = countryItem.querySelector('.countries-cases__country-name').textContent;
+        var countryName = countryItem.querySelector('.countries-cases__country-name').textContent.trim();
 
         if (!countryName.match("^".concat(value))) {
           countryItem.style.display = 'none';
@@ -693,6 +693,9 @@ var Utils = /*#__PURE__*/function () {
   \*********************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: __webpack_exports__, module, top-level-this-exports, __webpack_require__ */
+/*! CommonJS bailout: this is used directly at 36:3-7 */
+/*! CommonJS bailout: exports is used directly at 25:58-65 */
+/*! CommonJS bailout: module.exports is used directly at 25:116-130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) {
@@ -16390,6 +16393,9 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof
   \***********************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: __webpack_exports__, top-level-this-exports, module */
+/*! CommonJS bailout: this is used directly at 24:2-6 */
+/*! CommonJS bailout: exports is used directly at 23:70-77 */
+/*! CommonJS bailout: exports is used directly at 23:116-123 */
 /***/ (function(module, exports) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) {
@@ -21651,6 +21657,7 @@ __webpack_require__.r(__webpack_exports__);
   \*****************************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: module */
+/*! CommonJS bailout: module.exports is used directly at 732:31-45 */
 /***/ ((module) => {
 
 /**

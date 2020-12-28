@@ -36,7 +36,7 @@ class CountriesList {
     this.showAllCountry();
     this.arrayCountries.forEach((el) => {
       const countryItem = el;
-      const countryName = countryItem.querySelector('.countries-cases__country-name').textContent;
+      const countryName = countryItem.querySelector('.countries-cases__country-name').textContent.trim();
       if (!countryName.match(`^${value}`)) {
         countryItem.style.display = 'none';
       }
